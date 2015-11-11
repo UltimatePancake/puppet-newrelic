@@ -13,6 +13,14 @@ New Relic Server and APM Monitor
     app_name    => 'My Application',
   }
 ```
+#### ---NOTES ####
+Remember to add *-javaagent: /opt/newrelic/newrelic.jar* to your JVM startup environment variables.
+
+e.g.:
+  For Tomcat, edit the bin/setenv.sh file and add the above javaagent option to the CATALINA_OPTS variable:
+```Shell
+  export CATALINA_OPTS="${CATALINA_OPTS} -javaagent: /opt/newrelic/newrelic.jar"
+```
 #### ---LICENSE ####
 The MIT License (MIT)
 
