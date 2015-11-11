@@ -1,0 +1,15 @@
+{
+  "name": "UltimatePancake-newrelic",
+  "version": "0.1.0",
+  "author": "UltimatePancake",
+  "summary": "For adding New Relic server and APM monitoring",
+  "license": "MIT",
+  "source": "https://github.com/UltimatePancake/newrelic.git",
+  "project_page": "https://github.com/UltimatePancake/newrelic",
+  "issues_url": "https://github.com/UltimatePancake/newrelic/issues",
+  "dependencies": [
+    { "name": "puppetlabs-stdlib", "version_requirement": ">= 1.0.0" }
+    { "name": "puppetlabs-apt", "version_requirement": ">= 1.1.0" }
+  ]
+}
+
