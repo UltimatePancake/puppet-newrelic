@@ -1,7 +1,5 @@
 # Class: newrelic
 #
-#   This module adds the New Relic APM Monitor to the target node.
-#
 # Parameters:
 #
 # Variables:
