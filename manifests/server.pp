@@ -5,7 +5,7 @@
 # Parameters:
 #
 #  [*license_key*] - The license key supplied by New Relic on the instructions
-#                    page for setting up a new Server Monitor instance.
+#                    page for setting up a new server monitor instance.
 #
 #  [*use_latest*]  - Whether or not the package manager should download the
 #                    latest or only present package.
@@ -78,7 +78,7 @@ class newrelic::server (
     }
 
     default: {
-      fail("The newrelic_server_monitor module does not support ${::osfamily}.")
+      fail('The newrelic_server_monitor module does not support ${::osfamily}.')
     }
   }
 

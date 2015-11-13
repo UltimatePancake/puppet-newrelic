@@ -1,6 +1,6 @@
 name         'UltimatePancake-newrelic'
-version      '0.1.1'
-author       'UltimatePancake'
+version      '0.2.0'
+author       'Pier Gaetani'
 summary      'For adding New Relic server and APM monitoring'
 license      'MIT'
 source       'https://github.com/UltimatePancake/newrelic.git'

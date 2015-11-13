@@ -5,7 +5,7 @@
 # Parameters:
 #
 #  [*license_key*] - The license key supplied by New Relic on the instructions
-#                    page for setting up a new Server Monitor instance.
+#                    page for setting up a new application monitor instance.
 #
 #  [*app_name*]    - The name with which the application should be identified
 #                    in the New Relic monitor.
@@ -37,10 +37,16 @@ class newrelic::apm (
     ensure => 'latest'
   }
 
-  $newrelic_jar_path = '/opt/newrelic/newrelic.jar'
+  $base_path         = '/opt/newrelic'
 
-  $cmd_apm_package = '/usr/bin/wget https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip -P /opt/'
-  $test_apm_package = '/usr/bin/test -f ${newrelic_jar_path}'
+  $newrelic_jar_path = '/opt/newrelic/newrelic.jar'
+  $cmd_apm_package   = '/usr/bin/wget https://download.newrelic.com/newrelic/java-agent/newrelic-agent/current/newrelic-java.zip -P /opt/'
+  $test_apm_package  = '/usr/bin/test -f ${newrelic_jar_path}'
+
+  file { $base_path:
+    ensure => directory,
+    
+  }
 
   exec { 'get_apm_package':
     command => $cmd_apm_package,
