@@ -42,7 +42,7 @@ class newrelic::server (
   }
 
   case $::osfamily {
-    'Debian': {
+    'Debian', 'Ubuntu': {
       $add_repo_cmd     = '/bin/echo deb http://apt.newrelic.com/debian/ newrelic non-free >> /etc/apt/sources.list.d/newrelic.list'
       $add_repo_key_cmd = '/usr/bin/wget -O- https://download.newrelic.com/548C16BF.gpg | apt-key add -'
       $update_repos_cmd = '/usr/bin/apt-get update -y -qq'
