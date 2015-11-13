@@ -45,7 +45,7 @@ class newrelic::apm (
 
   file { $base_path:
     ensure => directory,
-    
+    before => File['get_apm_package'],
   }
 
   exec { 'get_apm_package':
@@ -63,7 +63,7 @@ class newrelic::apm (
 
   file { '/opt/newrelic/newrelic.yml':
     ensure  => file,
-    content => template('templates/newrelic.yml.epp'),
+    content => template('templates/newrelic.yml.erb'),
     require => Exec['unzip']
   }
 }
