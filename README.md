@@ -1,5 +1,5 @@
 #### puppet-newrelic
-New Relic Server and APM Monitor
+New Relic Server, APM, Nginx and MySQL Monitor Puppet module
 
 #### ---USAGE ####
 ```ruby

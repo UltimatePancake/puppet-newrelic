@@ -20,6 +20,8 @@
 # Authors:
 #
 # Pier-Angelo Gaetani
+# Based on plainprogrammer/puppet-newrelic_server_monitor
+#  https://github.com/plainprogrammer/puppet-newrelic_server_monitor
 #
 # Copyright:
 #
