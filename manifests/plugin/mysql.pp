@@ -63,7 +63,7 @@ class newrelic::plugin::mysql (
   }
 
   $plugin_install_path = '/opt/newrelic/plugins'
-  $cmd_get_plugin      = '/usr/bin/wget -O newrelic_mysql_plugin-${plugin_ver}.tar.gz https://github.com/newrelic-platform/newrelic_mysql_java_plugin/blob/master/dist/newrelic_mysql_plugin-${plugin_ver}.tar.gz?raw=true'
+  $cmd_get_plugin      = '/usr/bin/wget -O /tmp/newrelic_mysql_plugin-${plugin_ver}.tar.gz https://github.com/newrelic-platform/newrelic_mysql_java_plugin/blob/master/dist/newrelic_mysql_plugin-${plugin_ver}.tar.gz?raw=true'
   $cmd_extract_tar     = '/bin/tar xvf /tmp/newrelic_mysql_plugin-${plugin_ver}.tar.gz -C ${plugin_install_path}'
 
   file { '/opt/newrelic':
