@@ -33,7 +33,7 @@ class newrelic::apm (
     fail('The license_key parameter must be defined.')
   }
 
-  package { 'unzip': 
+  package { 'unzip':
     ensure => 'latest'
   }
 
